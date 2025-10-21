@@ -4,6 +4,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd 
 import joblib
+import sklearn
+
 
 # Load the trained model
 model = joblib.load('housing_price_model.pkl')
@@ -74,3 +76,4 @@ if st.button(" Predict Price"):
         st.success(f" **Estimated Price: ₹ {prediction:.2f} Lakhs**")
     except Exception as e:
         st.error(f" Prediction failed: {str(e)}")
+    print("sklearn.1.4.3")
